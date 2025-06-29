@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para sa Kalandian Ko</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/index.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="centered-text">
+        <h1>Reallyyyyy eheyyy ( ꈍ◡ꈍ)</h1>
+        <h2>ヽ(°〇°)ﾉ (  ≧ᗜ≦)</h2>
+    </div>
+
+    <canvas id="fireworks"></canvas>
+
+    <script>
+    const container = document.getElementById("fireworks");
+    const fireworks = new Fireworks.default(container, {
+        autoresize: true,
+        opacity: 0.7,
+        acceleration: 1.05,
+        friction: 0.97,
+        gravity: 1.5,
+        particles: 75,
+        trace: 3,
+        explosion: 5,
+        intensity: 25,
+        flickering: 50,
+        lineStyle: 'round',
+        hue: {
+        min: 0,
+        max: 360
+        },
+        delay: {
+        min: 30,
+        max: 60
+        },
+        rocketsPoint: {
+        min: 0,
+        max: 100
+        },
+        lineWidth: {
+        explosion: {
+            min: 1,
+            max: 3
+        },
+        trace: {
+            min: 1,
+            max: 2
+        }
+        },
+        brightness: {
+        min: 50,
+        max: 80
+        },
+        decay: {
+        min: 0.015,
+        max: 0.03
+        },
+        sound: {
+        enabled: false
+        }
+    });
+
+    // Start fireworks when page loads
+    fireworks.start();
+    </script>
+
+
+</body>
+
+
+</html>

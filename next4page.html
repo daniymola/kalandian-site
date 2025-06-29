@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para sa Kalandian Ko</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="centered-text">
+        <h1>That night, would you have kissed me back if I had kissed you?</h1>
+        <h2>(╭ರ_•́) (╭ರ_•́) (╭ರ_•́) (ノ ° 益 °) ノ</h2>
+
+    <div class="button-group">
+        <button id="yesBtn" onclick="goYes()">Yes</button>
+        <button id="noBtn" onclick="makeYesBigger()">No</button>
+    </div>
+    </div>
+</body>
+
+<script>
+  let noClickCount = 0;
+
+  function makeYesBigger() {
+    noClickCount++;
+    const yesBtn = document.getElementById("yesBtn");
+
+    // Increase the scale by 0.2 every time "No" is clicked
+    const scale = 1 + (noClickCount * 0.2);
+    yesBtn.style.transform = `scale(${scale})`;
+    yesBtn.style.transition = "transform 0.3s ease";
+  }
+
+  function goYes() {
+  fireworks.start(); // Start fireworks
+  setTimeout(() => {
+    window.location.href = "yes.html";
+  }, 3000); // Wait a bit to enjoy fireworks
+}
+
+</script>
+
